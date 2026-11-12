@@ -40,7 +40,7 @@ visibilities. Here the model is compared with **closure phases** and **log closu
 instead: the model visibilities are computed on the same baselines as the data and combined into
 the same closures. The consequences are:
 
-* **No self-calibration and no starting model are needed**, because closures do not depend on
+* **No starting model are needed**, because closures do not depend on
   the station gains.
 * **No absolute position.** Closures do not change if the whole source is shifted, so each core
   is placed at the origin of its own map. The core shift can only be measured relative to
@@ -48,9 +48,6 @@ the same closures. The consequences are:
 * **No total flux.** Closures do not change if the source is scaled, so the fit gives flux
   fractions. Fluxes in Jy are estimated afterwards from the visibility amplitudes and are
   approximate.
-* **Fewer and noisier data.** At each time there are (N-1)(N-2)/2 independent closure phases and
-  N(N-3)/2 closure amplitudes for N stations, instead of N(N-1)/2 visibilities, and each closure
-  combines 3 or 4 visibilities. Only visibilities with SNR above `--snrcut` are used.
 * Visibilities are still used, but only after the fit: for the Jy scale, the self-calibrated
   residual maps and the figures.
 
